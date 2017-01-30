@@ -1,0 +1,165 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://Scripts/LevelButtonPanel.gd" type="Script" id=1]
+[ext_resource path="res://Themes/GameTheme.tres" type="Theme" id=2]
+[ext_resource path="res://Sprites/YellowStar_sm.png" type="Texture" id=3]
+
+[node name="LevelButtonPanel" type="VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 410.0
+margin/bottom = 54.0
+custom_constants/separation = 4
+alignment = 0
+script/script = ExtResource( 1 )
+level_scene_file = null
+level_ID = ""
+level_name = ""
+
+[node name="ScorePanel" type="HBoxContainer" parent="."]
+
+rect/min_size = Vector2( 0, 20 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 410.0
+margin/bottom = 20.0
+custom_constants/separation = 24
+alignment = 1
+
+[node name="NeverPlayed" type="Label" parent="ScorePanel"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+theme/theme = ExtResource( 2 )
+margin/left = 150.0
+margin/top = 1.0
+margin/right = 236.0
+margin/bottom = 19.0
+text = "Never played"
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Stars" type="HBoxContainer" parent="ScorePanel"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 260.0
+margin/top = 0.0
+margin/right = 260.0
+margin/bottom = 20.0
+alignment = 1
+
+[node name="StarA" type="TextureFrame" parent="ScorePanel/Stars"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 24.0
+margin/bottom = 24.0
+texture = ExtResource( 3 )
+stretch_mode = 0
+
+[node name="StarB" type="TextureFrame" parent="ScorePanel/Stars"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 28.0
+margin/top = 0.0
+margin/right = 52.0
+margin/bottom = 24.0
+texture = ExtResource( 3 )
+stretch_mode = 0
+
+[node name="StarC" type="TextureFrame" parent="ScorePanel/Stars"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 24.0
+margin/bottom = 24.0
+texture = ExtResource( 3 )
+stretch_mode = 0
+
+[node name="BestScore" type="Label" parent="ScorePanel"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+theme/theme = ExtResource( 2 )
+margin/left = 160.0
+margin/top = 2.0
+margin/right = 250.0
+margin/bottom = 26.0
+text = "Best score: 0"
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="BestSequence" type="Label" parent="ScorePanel"]
+
+visibility/visible = false
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+theme/theme = ExtResource( 2 )
+margin/left = 217.0
+margin/top = 2.0
+margin/right = 330.0
+margin/bottom = 26.0
+text = "Best sequence: 0"
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LevelButton" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 2 )
+margin/left = 0.0
+margin/top = 24.0
+margin/right = 410.0
+margin/bottom = 50.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Level name"
+flat = false
+
+[connection signal="pressed" from="LevelButton" to="." method="_on_level_button_pressed"]
+
+

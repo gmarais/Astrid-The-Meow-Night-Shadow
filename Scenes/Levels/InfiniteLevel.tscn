@@ -1,0 +1,48 @@
+[gd_scene load_steps=9 format=1]
+
+[ext_resource path="res://Scripts/GameLevel.gd" type="Script" id=1]
+[ext_resource path="res://Objects/Environment/DirectionalLight.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Objects/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/MovingRamp.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Levels/Ramps/Ramp_000.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Levels/Ramps/Ramp_002.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Levels/Ramps/Ramp_001.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Objects/UI/InGameUI.tscn" type="PackedScene" id=8]
+
+[node name="World" type="Spatial"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+script/script = ExtResource( 1 )
+level_ID = "InfiniteLevel"
+is_looping = true
+a_grade_requirement = 25
+b_grade_requirement = 15
+c_grade_requirement = 6
+
+[node name="DirectionalLight" parent="." instance=ExtResource( 2 )]
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0 )
+
+[node name="RampsMover" type="Spatial" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+script/script = ExtResource( 4 )
+size_of_ramps = 100
+
+[node name="Ramp1 " parent="RampsMover" instance=ExtResource( 5 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -95 )
+
+[node name="Ramp2" parent="RampsMover" instance=ExtResource( 6 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5 )
+
+[node name="Ramp3" parent="RampsMover" instance=ExtResource( 7 )]
+
+transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 105 )
+
+[node name="GameUI" parent="." instance=ExtResource( 8 )]
+
+

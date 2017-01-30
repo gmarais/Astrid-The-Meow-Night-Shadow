@@ -1,0 +1,858 @@
+[gd_scene load_steps=35 format=1]
+
+[ext_resource path="res://Models/BuildingParts/wall_border.msh" type="Mesh" id=1]
+[ext_resource path="res://Models/BuildingParts/wall_corner.msh" type="Mesh" id=2]
+[ext_resource path="res://Models/BuildingParts/wall_inner_corner.msh" type="Mesh" id=3]
+[ext_resource path="res://Models/BuildingParts/gable_border.msh" type="Mesh" id=4]
+[ext_resource path="res://Models/BuildingParts/gable_corner.msh" type="Mesh" id=5]
+[ext_resource path="res://Models/BuildingParts/gable_inner_corner.msh" type="Mesh" id=6]
+[ext_resource path="res://Models/BuildingParts/gable_middle.msh" type="Mesh" id=7]
+[ext_resource path="res://Models/BuildingParts/gable_straight_end.msh" type="Mesh" id=8]
+[ext_resource path="res://Models/BuildingParts/gable_straight_end_mirrored.msh" type="Mesh" id=9]
+[ext_resource path="res://Models/BuildingParts/flat_border.msh" type="Mesh" id=10]
+[ext_resource path="res://Models/BuildingParts/flat_corner.msh" type="Mesh" id=11]
+[ext_resource path="res://Models/BuildingParts/flat_inner_corner.msh" type="Mesh" id=12]
+[ext_resource path="res://Models/BuildingParts/flat_middle.msh" type="Mesh" id=13]
+[ext_resource path="res://Models/BuildingParts/mansard_border.msh" type="Mesh" id=14]
+[ext_resource path="res://Models/BuildingParts/mansard_corner.msh" type="Mesh" id=15]
+[ext_resource path="res://Models/BuildingParts/mansard_inner_corner.msh" type="Mesh" id=16]
+[ext_resource path="res://Models/BuildingParts/mansard_middle.msh" type="Mesh" id=17]
+
+[sub_resource type="ConvexPolygonShape" id=1]
+
+points = Vector3Array( 1, 0, 1, 1, 0, -0.7, -1, 0, 1, -1, 0, -0.7, 1, 2, 1, 1, 2, -0.7, -1, 2, 1, -1, 2, -0.7 )
+
+[sub_resource type="ConvexPolygonShape" id=2]
+
+points = Vector3Array( 0.7, 0, 1, 0.7, 0, -0.7, -1, 0, 1, -1, 0, -0.7, 0.7, 2, 1, 0.7, 2, -0.7, -1, 2, 1, -1, 2, -0.7 )
+
+[sub_resource type="ConcavePolygonShape" id=3]
+
+data = Vector3Array( 1, 0, -0.6998, 1, 2, -0.6998, 0.7, 0, -0.6998, 0.7, 0, -0.6998, 1, 2, -0.6998, 0.7, 2, -0.6998, 0.7, 0, -0.6998, 0.7, 2, -0.6998, 0.7, 0, -0.9998, 0.7, 0, -0.9998, 0.7, 2, -0.6998, 0.7, 2, -0.9998 )
+
+[sub_resource type="ConvexPolygonShape" id=4]
+
+points = Vector3Array( 1, 0.5, -0.6999, -0.9999, 0.5, -0.6999, 1, 0.2, -1.0029, -0.9999, 0.2, -1.0029, 1, 0, -1.0029, 1, 0.2, -1.0029, -0.9999, 0, -1.0029, -0.9999, 0.2, -1.0029, -0.9999, 0, -0.6999, 1, 0, -0.6999, -0.9999, 0, -1.0029, 1, 0, -1.0029, -0.9999, 0.5, -0.6999, 1, 0.5, -0.6999, -0.9999, 2.2, 1, 1, 2.2, 1 )
+
+[sub_resource type="ConvexPolygonShape" id=5]
+
+points = Vector3Array( 0.7, 0.5, 1, 0.7, 0.5, -0.6999, 1.003, 0.2, 1, 1.003, 0.2, -1.0029, 0.7, 0.5, -0.6999, -0.9999, 0.5, -0.6999, 1.003, 0.2, -1.0029, -0.9999, 0.2, -1.0029, 1.003, 0.2, -1.0029, 1.003, 0, -1.0029, 1.003, 0.2, 1, 1.003, 0, 1, 1.003, 0, -1.0029, 1.003, 0.2, -1.0029, -0.9999, 0, -1.0029, -0.9999, 0.2, -1.0029, -0.9999, 0, -0.6999, 0.7, 0, -0.6999, -0.9999, 0, -1.0029, 1.003, 0, -1.0029, 0.7, 0, -0.6999, 0.7, 0, 1, 1.003, 0, -1.0029, 1.003, 0, 1, -0.9999, 0.5, -0.6999, 0.7, 0.5, -0.6999, -0.9999, 2.2, 1, -0.1499, 1.35, 0.15, 0.7, 0.5, -0.6999, 0.7, 0.5, 1, -0.1499, 1.35, 0.15, -0.9999, 2.2, 1 )
+
+[sub_resource type="ConcavePolygonShape" id=6]
+
+data = Vector3Array( -0.9998, 2.2, 1, -0.9998, 2.2, -0.9998, 0.7, 0.5007, -0.6998, 0.7, 0.5007, -0.6998, -0.9998, 2.2, -0.9998, 0.7, 0.5, -0.9998, -0.9998, 2.2, 1, 0.7, 0.5007, -0.6998, 1, 2.2, 1, 1, 2.2, 1, 0.7, 0.5007, -0.6998, 1, 0.5, -0.6998, 0.7, 0.5, -0.9998, 1, 0.2007, -0.9998, 0.7, 0.5007, -0.6998, 1, 0.2007, -0.9998, 1, 0.5, -0.6998, 0.7, 0.5007, -0.6998 )
+
+[sub_resource type="ConvexPolygonShape" id=7]
+
+points = Vector3Array( -0.9999, 2.2, -0.9999, 1, 2.2, -0.9999, -0.9999, 2.2, 1, 1, 2.2, 1 )
+
+[sub_resource type="ConcavePolygonShape" id=8]
+
+data = Vector3Array( 1, 0.5, -0.6998, 0.7, 0.5, -0.6998, 1, 0.2, -0.9998, 1, 0.2, -0.9998, 0.7, 0.5, -0.6998, 0.7, 0.2, -1.0028, 0.7, 0, -1.0028, 0.7, 0.2, -1.0028, -0.9998, 0, -1.0028, -0.9998, 0, -1.0028, 0.7, 0.2, -1.0028, -0.9998, 0.2, -1.0028, -0.9998, 0, -0.6998, 0.7, 0, -0.6998, -0.9998, 0, -1.0028, -0.9998, 0, -1.0028, 0.7, 0, -0.6998, 0.7, 0, -1.0028, -0.9998, 0.5, -0.6998, 0.7, 0.5, -0.6998, -0.9998, 2.2, 1, -0.9998, 2.2, 1, 0.7, 0.5, -0.6998, 0.7, 2.2, 1, 1, 0.5, -0.6998, 1, 0.2, -0.9998, 1, 0, -0.6998, 1, 0, -0.6998, 1, 0.2, -0.9998, 1, 0, -0.9998, 1, 2.2, 1, 0.7, 2.2, 1, 1, 0.5, -0.6998, 1, 0.5, -0.6998, 0.7, 2.2, 1, 0.7, 0.5, -0.6998, 0.7, 0, -0.6998, 1, 0, -0.6998, 0.7, 0, -1.0028, 0.7, 0, -1.0028, 1, 0, -0.6998, 1, 0, -0.9998, 1, 0, -0.9998, 1, 0.2, -0.9998, 0.7, 0, -1.0028, 0.7, 0, -1.0028, 1, 0.2, -0.9998, 0.7, 0.2, -1.0028, 0.7, 1.7, 1, 0.7, 0, -0.6998, 0.7, 0, 1, 1, 1.7, 1, 1, 2.2, 1, 1, 0, -0.6998, 1, 0, -0.6998, 1, 2.2, 1, 1, 0.5, -0.6998, 0.7, 1.7, 1, 1, 1.7, 1, 0.7, 0, -0.6998, 0.7, 0, -0.6998, 1, 1.7, 1, 1, 0, -0.6998, 0.7, 0.5, -0.6998, -0.9998, 0.5, -0.6998, 0.7, 0.2, -1.0028, 0.7, 0.2, -1.0028, -0.9998, 0.5, -0.6998, -0.9998, 0.2, -1.0028 )
+
+[sub_resource type="ConcavePolygonShape" id=9]
+
+data = Vector3Array( 0.7, 0.2, 1.003, 0.7, 0.5, 0.7, 1, 0.2, 1, 1, 0.2, 1, 0.7, 0.5, 0.7, 1, 0.5, 0.7, -0.9998, 0.2, 1.003, 0.7, 0.2, 1.003, -0.9998, 0, 1.003, -0.9998, 0, 1.003, 0.7, 0.2, 1.003, 0.7, 0, 1.003, 0.7, 0, 1.003, 0.7, 0, 0.7, -0.9998, 0, 1.003, -0.9998, 0, 1.003, 0.7, 0, 0.7, -0.9998, 0, 0.7, 0.7, 2.2, -0.9998, 0.7, 0.5, 0.7, -0.9998, 2.2, -0.9998, -0.9998, 2.2, -0.9998, 0.7, 0.5, 0.7, -0.9998, 0.5, 0.7, 1, 0, 1, 1, 0.2, 1, 1, 0, 0.7, 1, 0, 0.7, 1, 0.2, 1, 1, 0.5, 0.7, 0.7, 0.5, 0.7, 0.7, 2.2, -0.9998, 1, 0.5, 0.7, 1, 0.5, 0.7, 0.7, 2.2, -0.9998, 1, 2.2, -0.9998, 1, 0, 1, 1, 0, 0.7, 0.7, 0, 1.003, 0.7, 0, 1.003, 1, 0, 0.7, 0.7, 0, 0.7, 0.7, 0.2, 1.003, 1, 0.2, 1, 0.7, 0, 1.003, 0.7, 0, 1.003, 1, 0.2, 1, 1, 0, 1, 0.7, 0, -0.9998, 0.7, 0, 0.7, 0.7, 1.7, -0.9998, 1, 0.5, 0.7, 1, 2.2, -0.9998, 1, 0, 0.7, 1, 0, 0.7, 1, 2.2, -0.9998, 1, 1.7, -0.9998, 1, 0, 0.7, 1, 1.7, -0.9998, 0.7, 0, 0.7, 0.7, 0, 0.7, 1, 1.7, -0.9998, 0.7, 1.7, -0.9998, -0.9998, 0.2, 1.003, -0.9998, 0.5, 0.7, 0.7, 0.2, 1.003, 0.7, 0.2, 1.003, -0.9998, 0.5, 0.7, 0.7, 0.5, 0.7 )
+
+[sub_resource type="ConcavePolygonShape" id=10]
+
+data = Vector3Array( 1, 0.3054, -0.8513, -0.9998, 0.3054, -0.8513, 1, 0.2, -1.0028, 1, 0.2, -1.0028, -0.9998, 0.3054, -0.8513, -0.9998, 0.2, -1.0028, 1, 0, -1.0028, 1, 0.2, -1.0028, -0.9998, 0, -1.0028, -0.9998, 0, -1.0028, 1, 0.2, -1.0028, -0.9998, 0.2, -1.0028, -0.9998, 0, -0.6998, 1, 0, -0.6998, -0.9998, 0, -1.0028, -0.9998, 0, -1.0028, 1, 0, -0.6998, 1, 0, -1.0028, -0.9998, 0.2, -0.6998, 1, 0.2, -0.6998, -0.9998, 0.2, 1, -0.9998, 0.2, 1, 1, 0.2, -0.6998, 1, 0.2, 1, 1, 0.2, -0.6998, -0.9998, 0.2, -0.6998, 1, 0.3054, -0.8513, 1, 0.3054, -0.8513, -0.9998, 0.2, -0.6998, -0.9998, 0.3054, -0.8513 )
+
+[sub_resource type="ConcavePolygonShape" id=11]
+
+data = Vector3Array( 0.8515, 0.3054, 1, 0.8515, 0.3054, -0.8513, 1.003, 0.2, 1, 1.003, 0.2, 1, 0.8515, 0.3054, -0.8513, 1.003, 0.2, -1.0028, 0.8515, 0.3054, -0.8513, -0.9998, 0.3054, -0.8513, 1.003, 0.2, -1.0028, 1.003, 0.2, -1.0028, -0.9998, 0.3054, -0.8513, -0.9998, 0.2, -1.0028, 1.003, 0.2, -1.0028, 1.003, 0, -1.0028, 1.003, 0.2, 1, 1.003, 0.2, 1, 1.003, 0, -1.0028, 1.003, 0, 1, 1.003, 0, -1.0028, 1.003, 0.2, -1.0028, -0.9998, 0, -1.0028, -0.9998, 0, -1.0028, 1.003, 0.2, -1.0028, -0.9998, 0.2, -1.0028, -0.9998, 0, -0.6998, 0.7, 0, -0.6998, -0.9998, 0, -1.0028, -0.9998, 0, -1.0028, 0.7, 0, -0.6998, 1.003, 0, -1.0028, 0.7, 0, -0.6998, 0.7, 0, 1, 1.003, 0, -1.0028, 1.003, 0, -1.0028, 0.7, 0, 1, 1.003, 0, 1, 0.7, 0.2, -0.6998, -0.9998, 0.2, -0.6998, 0.8515, 0.3054, -0.8513, 0.8515, 0.3054, -0.8513, -0.9998, 0.2, -0.6998, -0.9998, 0.3054, -0.8513, 0.7, 0.2, 1, 0.7, 0.2, -0.6998, 0.8515, 0.3054, 1, 0.8515, 0.3054, 1, 0.7, 0.2, -0.6998, 0.8515, 0.3054, -0.8513, 0.7, 0.2, -0.6998, 0.7, 0.2, 1, -0.9998, 0.2, -0.6998, -0.9998, 0.2, -0.6998, 0.7, 0.2, 1, -0.9998, 0.2, 1 )
+
+[sub_resource type="ConcavePolygonShape" id=12]
+
+data = Vector3Array( -0.9998, 0.2, 1, -0.9998, 0.2, -0.9998, 0.7, 0.2, -0.6998, 0.7, 0.2, -0.6998, -0.9998, 0.2, -0.9998, 0.7, 0.2, -0.9998, -0.9998, 0.2, 1, 0.7, 0.2, -0.6998, 1, 0.2, 1, 1, 0.2, 1, 0.7, 0.2, -0.6998, 1, 0.2, -0.6998, 0.7, 0.2, -0.9998, 0.85, 0.3, -0.9998, 0.7, 0.2, -0.6998, 0.7, 0.2, -0.6998, 0.85, 0.3, -0.9998, 0.85, 0.3, -0.8498, 1, 0.2, -0.9998, 1, 0.3, -0.8498, 0.85, 0.3, -0.8498, 1, 0.3, -0.8498, 1, 0.2, -0.6998, 0.85, 0.3, -0.8498, 0.85, 0.3, -0.8498, 1, 0.2, -0.6998, 0.7, 0.2, -0.6998, 0.85, 0.3, -0.9998, 1, 0.2, -0.9998, 0.85, 0.3, -0.8498 )
+
+[sub_resource type="ConvexPolygonShape" id=13]
+
+points = Vector3Array( 1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0.2, 1, 1, 0.2, -1, -1, 0.2, 1, -1, 0.2, -1 )
+
+[sub_resource type="ConcavePolygonShape" id=14]
+
+data = Vector3Array( 1, 0.2, -0.6998, -0.9998, 0.2, -0.6998, 1, 0.2, -1.0028, 1, 0.2, -1.0028, -0.9998, 0.2, -0.6998, -0.9998, 0.2, -1.0028, -0.9998, 1.4963, 0, 1, 1.4963, 0, -0.9998, 1.9, 1, -0.9998, 1.9, 1, 1, 1.4963, 0, 1, 1.9, 1, 1, 0, -1.0028, 1, 0.2, -1.0028, -0.9998, 0, -1.0028, -0.9998, 0, -1.0028, 1, 0.2, -1.0028, -0.9998, 0.2, -1.0028, -0.9998, 0, -0.6998, 1, 0, -0.6998, -0.9998, 0, -1.0028, -0.9998, 0, -1.0028, 1, 0, -0.6998, 1, 0, -1.0028, -0.9998, 0.2, -0.6998, 1, 0.2, -0.6998, -0.9998, 1.4963, 0, -0.9998, 1.4963, 0, 1, 0.2, -0.6998, 1, 1.4963, 0 )
+
+[sub_resource type="ConcavePolygonShape" id=15]
+
+data = Vector3Array( 0.7, 0.2, 1, 0.7, 0.2, -0.6998, 1.003, 0.2006, 1, 1.003, 0.2006, 1, 0.7, 0.2, -0.6998, 1.003, 0.2006, -1.0028, 0.7, 0.2, 1, 0, 1.4963, 1, 0.7, 0.2, -0.6998, 0.7, 0.2, -0.6998, 0, 1.4963, 1, 0, 1.4963, 0, 0.7, 0.2, -0.6998, 0, 1.4963, 0, -0.9998, 0.2, -0.6998, -0.9998, 0.2, -0.6998, 0, 1.4963, 0, -0.9998, 1.4963, 0, 0.7, 0.2, -0.6998, -0.9998, 0.2, -0.6998, 1.003, 0.2006, -1.0028, 1.003, 0.2006, -1.0028, -0.9998, 0.2, -0.6998, -0.9998, 0.2006, -1.0028, 1.003, 0.2006, -1.0028, 1.003, -0.0001, -1.0028, 1.003, 0.2006, 1, 1.003, 0.2006, 1, 1.003, -0.0001, -1.0028, 1.003, -0.0001, 1, 1.003, -0.0001, -1.0028, 1.003, 0.2006, -1.0028, -0.9998, -0.0001, -1.0028, -0.9998, -0.0001, -1.0028, 1.003, 0.2006, -1.0028, -0.9998, 0.2006, -1.0028, -0.9998, 0.0003, -0.6998, 0.7, 0.0003, -0.6998, -0.9998, -0.0001, -1.0028, -0.9998, -0.0001, -1.0028, 0.7, 0.0003, -0.6998, 1.003, -0.0001, -1.0028, 0.7, 0.0003, -0.6998, 0.7, 0.0003, 1, 1.003, -0.0001, -1.0028, 1.003, -0.0001, -1.0028, 0.7, 0.0003, 1, 1.003, -0.0001, 1, -0.4998, 1.6981, 0.5, -0.9998, 1.9, 1, 0, 1.4963, 0, 0, 1.4963, 0, -0.9998, 1.9, 1, -0.9998, 1.4963, 0, 0, 1.4963, 1, -0.9998, 1.9, 1, 0, 1.4963, 0, 0, 1.4963, 0, -0.9998, 1.9, 1, -0.4998, 1.6981, 0.5 )
+
+[sub_resource type="ConcavePolygonShape" id=16]
+
+data = Vector3Array( 0, 1.4963, 0, 0.7, 0.2, -0.6998, 0.7, 1.4963, 0, 0, 1.4963, 0, 0, 1.4963, -0.6998, 0.7, 0.2, -0.6998, 0, 1.4963, 0, 0.7, 1.4963, 0, -0.9998, 1.9, 1, -0.9998, 1.9, 1, 0.7, 1.4963, 0, 0.7, 1.9, 1, -0.9998, 1.9, -0.6998, 0, 1.4963, -0.6998, -0.9998, 1.9, 1, -0.9998, 1.9, 1, 0, 1.4963, -0.6998, 0, 1.4963, 0, 1, 1.9, 1, 0.7, 1.9, 1, 1, 1.4963, 0, 1, 1.4963, 0, 0.7, 1.9, 1, 0.7, 1.4963, 0, 1, 1.4963, 0, 0.7, 1.4963, 0, 1, 0.2, -0.6998, 1, 0.2, -0.6998, 0.7, 1.4963, 0, 0.7, 0.2, -0.6998, 0.7, 0.2, -0.9998, 0.7, 0.2, -0.6998, 0, 1.4963, -0.9998, 0, 1.4963, -0.9998, 0.7, 0.2, -0.6998, 0, 1.4963, -0.6998, 0, 1.4963, -0.9998, 0, 1.4963, -0.6998, -0.9998, 1.9, -0.9998, -0.9998, 1.9, -0.9998, 0, 1.4963, -0.6998, -0.9998, 1.9, -0.6998, 0.7, 0.2, -0.9998, 1, 0.2, -0.9998, 0.7, 0.2, -0.6998, 0.7, 0.2, -0.6998, 1, 0.2, -0.9998, 1, 0.2, -0.6998 )
+
+[sub_resource type="ConvexPolygonShape" id=17]
+
+points = Vector3Array( 1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 1.9, 1, 1, 1.9, -1, -1, 1.9, 1, -1, 1.9, -1 )
+
+[node name="BuildingTiles" type="Spatial"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="WallBorder" type="MeshInstance" parent="."]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 1 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="WallBorder"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = true
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 2
+collision/mask = 1
+friction = 0.3
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="WallBorder/StaticBody"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+[node name="WallCorner" type="MeshInstance" parent="."]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 2 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="WallCorner"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = true
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 2
+collision/mask = 1
+friction = 0.3
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="WallCorner/StaticBody"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
+
+[node name="WallInnerCorner" type="MeshInstance" parent="."]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 3 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="WallInnerCorner"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = true
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 2
+collision/mask = 1
+friction = 0.3
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="WallInnerCorner/StaticBody"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 3 )
+trigger = false
+_update_shape_index = 0
+
+[node name="GableBorder" type="MeshInstance" parent="."]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 4 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="GableBorder"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = true
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 4 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 2
+collision/mask = 1
+friction = 0.3
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="GableBorder/StaticBody"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 4 )
+trigger = false
+_update_shape_index = 0
+
+[node name="GableCorner" type="MeshInstance" parent="."]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 5 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="GableCorner"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = true
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 5 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 2
+collision/mask = 1
+friction = 0.3
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="GableCorner/StaticBody"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 5 )
+trigger = false
+_update_shape_index = 0
+
+[node name="GableInnerCorner" type="MeshInstance" parent="."]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 6 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="GableInnerCorner"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = true
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 6 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 2
+collision/mask = 1
+friction = 0.3
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="GableInnerCorner/StaticBody"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 6 )
+trigger = false
+_update_shape_index = 0
+
+[node name="GableMiddle" type="MeshInstance" parent="."]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 7 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="GableMiddle"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = true
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 7 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 2
+collision/mask = 1
+friction = 0.3
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="GableMiddle/StaticBody"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 7 )
+trigger = false
+_update_shape_index = 0
+
+[node name="GableStraightEnd" type="MeshInstance" parent="."]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 8 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="GableStraightEnd"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = true
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 8 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 2
+collision/mask = 1
+friction = 0.3
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="GableStraightEnd/StaticBody"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 8 )
+trigger = false
+_update_shape_index = 0
+
+[node name="GableStraightEndMirrored" type="MeshInstance" parent="."]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 9 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="GableStraightEndMirrored"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = true
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 9 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 2
+collision/mask = 1
+friction = 0.3
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="GableStraightEndMirrored/StaticBody"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 9 )
+trigger = false
+_update_shape_index = 0
+
+[node name="FlatBorder" type="MeshInstance" parent="."]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 10 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="FlatBorder"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = true
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 10 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 2
+collision/mask = 1
+friction = 0.3
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="FlatBorder/StaticBody"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 10 )
+trigger = false
+_update_shape_index = 0
+
+[node name="FlatCorner" type="MeshInstance" parent="."]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 11 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="FlatCorner"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = true
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 11 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 2
+collision/mask = 1
+friction = 0.3
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="FlatCorner/StaticBody"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 11 )
+trigger = false
+_update_shape_index = 0
+
+[node name="FlatInnerCorner" type="MeshInstance" parent="."]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 12 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="FlatInnerCorner"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = true
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 12 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 2
+collision/mask = 1
+friction = 0.3
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="FlatInnerCorner/StaticBody"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 12 )
+trigger = false
+_update_shape_index = 0
+
+[node name="FlatMiddle" type="MeshInstance" parent="."]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 13 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="FlatMiddle"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = true
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 13 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 2
+collision/mask = 1
+friction = 0.3
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="FlatMiddle/StaticBody"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 13 )
+trigger = false
+_update_shape_index = 0
+
+[node name="MansardBorder" type="MeshInstance" parent="."]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 14 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="MansardBorder"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = true
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 14 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 2
+collision/mask = 1
+friction = 0.3
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="MansardBorder/StaticBody"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 14 )
+trigger = false
+_update_shape_index = 0
+
+[node name="MansardCorner" type="MeshInstance" parent="."]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 15 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="MansardCorner"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = true
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 15 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 2
+collision/mask = 1
+friction = 0.3
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="MansardCorner/StaticBody"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 15 )
+trigger = false
+_update_shape_index = 0
+
+[node name="MansardInnerCorner" type="MeshInstance" parent="."]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 16 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="MansardInnerCorner"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = true
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 16 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 2
+collision/mask = 1
+friction = 0.3
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="MansardInnerCorner/StaticBody"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 16 )
+trigger = false
+_update_shape_index = 0
+
+[node name="MansardMiddle" type="MeshInstance" parent="."]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+layers = 1
+geometry/visible = true
+geometry/material_override = null
+geometry/cast_shadow = 1
+geometry/receive_shadows = true
+geometry/range_begin = 0.0
+geometry/range_end = 0.0
+geometry/extra_cull_margin = 0.0
+geometry/billboard = false
+geometry/billboard_y = false
+geometry/depth_scale = false
+geometry/visible_in_all_rooms = false
+geometry/use_baked_light = false
+geometry/baked_light_tex_id = 0
+mesh/mesh = ExtResource( 17 )
+mesh/skeleton = NodePath("..")
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="MansardMiddle"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = true
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 17 )
+shapes/0/transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 2
+collision/mask = 1
+friction = 0.3
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="MansardMiddle/StaticBody"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 17 )
+trigger = false
+_update_shape_index = 0
+
+

@@ -1,0 +1,554 @@
+[gd_scene load_steps=26 format=1]
+
+[ext_resource path="res://Scripts/Main.gd" type="Script" id=1]
+[ext_resource path="res://Objects/Buildings/BuildingTiles.tres" type="MeshLibrary" id=2]
+[ext_resource path="res://Objects/Buildings/Chimneys/PipeChimney.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Objects/Buildings/Chimneys/SquaredChimney.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Objects/Buildings/Chimneys/LargeSquaredChimney.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Objects/Environment/DirectionalLight.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Models/DAE/Astrid.scn" type="PackedScene" id=7]
+[ext_resource path="res://Scripts/ClickPurr.gd" type="Script" id=8]
+[ext_resource path="res://Objects/Environment/Environment.tres" type="Environment" id=9]
+[ext_resource path="res://Scripts/LandingMenu.gd" type="Script" id=10]
+[ext_resource path="res://Sprites/Astrid The Meow Night Shadow Text Title.png" type="Texture" id=11]
+[ext_resource path="res://Themes/GameTheme.tres" type="Theme" id=12]
+[ext_resource path="res://Sprites/symbols_levelselection_settings_credits_exit_restart_back.png" type="Texture" id=13]
+[ext_resource path="res://Scripts/LevelSelectionMenu.gd" type="Script" id=14]
+[ext_resource path="res://Fonts/Griffy-Regular_32.fnt" type="BitmapFont" id=15]
+[ext_resource path="res://Objects/UI/LevelButtonPanel.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Objects/UI/SettingsMenu.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scripts/CreditsMenu.gd" type="Script" id=18]
+
+[sub_resource type="CapsuleShape" id=1]
+
+radius = 0.6
+height = 0.75
+
+[sub_resource type="AtlasTexture" id=2]
+
+atlas = ExtResource( 13 )
+region = Rect2( 8, 4, 18, 17 )
+margin = Rect2( 24, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=3]
+
+atlas = ExtResource( 13 )
+region = Rect2( 27, 4, 17, 17 )
+margin = Rect2( 24, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=4]
+
+atlas = ExtResource( 13 )
+region = Rect2( 46, 4, 24, 17 )
+margin = Rect2( 20, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=5]
+
+atlas = ExtResource( 13 )
+region = Rect2( 72, 4, 17, 17 )
+margin = Rect2( 24, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=6]
+
+atlas = ExtResource( 13 )
+region = Rect2( 116, 4, 17, 17 )
+margin = Rect2( 24, 0, 0, 0 )
+
+[sub_resource type="AtlasTexture" id=7]
+
+atlas = ExtResource( 13 )
+region = Rect2( 116, 4, 17, 17 )
+margin = Rect2( 24, 0, 0, 0 )
+
+[node name="Main" type="Spatial"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+script/script = ExtResource( 1 )
+
+[node name="GridMap" type="GridMap" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 0, -0.7, 0 )
+theme/theme = ExtResource( 2 )
+theme/bake = false
+lighting/bake = false
+cell/size = 2.0
+cell/octant_size = 4
+cell/center_x = false
+cell/center_y = false
+cell/center_z = false
+cell/scale = 1.0
+data = { "cells":IntArray( 0, 0, 1048584, 1, 0, 8, 65527, 0, 655372, 65528, 0, 1441804, -196608, 0, 1048577, -196607, 0, 1, -131081, 0, 655361, -131080, 0, 1441793, -131072, 0, 1048577, -131071, 0, 1, -65545, 0, 655361, -65544, 0, 1441793, -65536, 0, 1048577, -65535, 0, 1, -9, 0, 655361, -8, 0, 1441793, 0, 1, 655368, 1, 1, 1441800, 65532, 1, 1048582, 65533, 1, 1048591, -196608, 1, 655361, -196607, 1, 1441793, -131076, 1, 1048577, -131075, 1, 1, -131072, 1, 655361, -131071, 1, 1441793, -65540, 1, 1048577, -65539, 1, 1, -65536, 1, 655361, -65535, 1, 1441793, -4, 1, 1048577, -3, 1, 1, 65532, 2, 1048578, 65533, 2, 4, 65534, 2, 6, -131076, 2, 1048576, -131075, 2, 16, -131074, 2, 1, -65540, 2, 1048576, -65539, 2, 16, -65538, 2, 1, -4, 2, 1048576, -3, 2, 16, -2, 2, 1, 65532, 3, 655363, 65533, 3, 655362, 65534, 3, 15, -131076, 3, 655361, -131075, 3, 655360, -131074, 3, 1441793, -65540, 3, 655361, -65539, 3, 655360, -65538, 3, 1441793, -4, 3, 655361, -3, 3, 655360, -2, 3, 1441793, 0, 65530, 3, 65534, 65530, 655375, 65535, 65530, 2, -196608, 65530, 1, -131074, 65530, 1048577, -131073, 65530, 0, -131072, 65530, 1, -65538, 65530, 1048577, -65537, 65530, 0, -65536, 65530, 1, -2, 65530, 1048577, -1, 65530, 0, 0, 65531, 1441794, 65534, 65531, 655366, 65535, 65531, 655364, -196608, 65531, 1441792, -131074, 65531, 655361, -131073, 65531, 655376, -131072, 65531, 1441792, -65538, 65531, 655361, -65537, 65531, 655376, -65536, 65531, 1441792, -2, 65531, 655361, -1, 65531, 655376, 0, 65532, 1441798, 2, 65532, 1048582, 3, 65532, 1048591, 65527, 65532, 1048588, 65528, 65532, 12, 65531, 65532, 1048579, 65532, 65532, 2, 65533, 65532, 6, 65535, 65532, 1441807, -196608, 65532, 1441793, -196606, 65532, 1048577, -196605, 65532, 1, -131081, 65532, 1048577, -131080, 65532, 1, -131077, 65532, 1048577, -131076, 65532, 0, -131075, 65532, 1, -131073, 65532, 655361, -131072, 65532, 1441793, -131070, 65532, 1048577, -131069, 65532, 1, -65545, 65532, 1048577, -65544, 65532, 1, -65541, 65532, 1048577, -65540, 65532, 0, -65539, 65532, 1, -65537, 65532, 655361, -65536, 65532, 1441793, -65534, 65532, 1048577, -65533, 65532, 1, -9, 65532, 1048577, -8, 65532, 1, -5, 65532, 1048577, -4, 65532, 0, -3, 65532, 1, -1, 65532, 655361, 1, 65533, 655375, 2, 65533, 1048580, 3, 65533, 1441794, 65527, 65533, 1048587, 65528, 65533, 13, 65529, 65533, 12, 65531, 65533, 1048578, 65532, 65533, 1441796, 65533, 65533, 15, -196607, 65533, 1048577, -196606, 65533, 1048592, -196605, 65533, 1441792, -131081, 65533, 1048576, -131080, 65533, 16, -131079, 65533, 1, -131077, 65533, 1048576, -131076, 65533, 1441808, -131075, 65533, 1441793, -131071, 65533, 1048577, -131070, 65533, 1048592, -131069, 65533, 1441792, -65545, 65533, 1048576, -65544, 65533, 16, -65543, 65533, 1, -65541, 65533, 1048576, -65540, 65533, 1441808, -65539, 65533, 1441793, -65535, 65533, 1048577, -65534, 65533, 1048592, -65533, 65533, 1441792, -9, 65533, 1048576, -8, 65533, 16, -7, 65533, 1, -5, 65533, 1048576, -4, 65533, 1441808, -3, 65533, 1441793, 1, 65534, 655366, 2, 65534, 655362, 3, 65534, 1441795, 65527, 65534, 1048587, 65528, 65534, 1441805, 65529, 65534, 1441804, 65531, 65534, 1441807, 65532, 65534, 1441798, 65534, 65534, 1048582, 65535, 65534, 1048591, -196607, 65534, 655361, -196606, 65534, 655360, -196605, 65534, 1441793, -131081, 65534, 1048576, -131080, 65534, 1441808, -131079, 65534, 1441793, -131077, 65534, 655361, -131076, 65534, 1441793, -131074, 65534, 1048577, -131073, 65534, 1, -131071, 65534, 655361, -131070, 65534, 655360, -131069, 65534, 1441793, -65545, 65534, 1048576, -65544, 65534, 1441808, -65543, 65534, 1441793, -65541, 65534, 655361, -65540, 65534, 1441793, -65538, 65534, 1048577, -65537, 65534, 1, -65535, 65534, 655361, -65534, 65534, 655360, -65533, 65534, 1441793, -9, 65534, 1048576, -8, 65534, 1441808, -7, 65534, 1441793, -5, 65534, 655361, -4, 65534, 1441793, -2, 65534, 1048577, -1, 65534, 1, 65527, 65535, 1048587, 65528, 65535, 1441803, 65534, 65535, 1441807, 65535, 65535, 1441798, -131081, 65535, 1048576, -131080, 65535, 1441792, -131074, 65535, 655361, -131073, 65535, 1441793, -65545, 65535, 1048576, -65544, 65535, 1441792, -65538, 65535, 655361, -65537, 65535, 1441793, -9, 65535, 1048576, -8, 65535, 1441792, -2, 65535, 655361, -1, 65535, 1441793 ) }
+__meta__ = { "_editor_clip_":0, "_editor_floor_":Vector3( 0, 0, 0 ) }
+
+[node name="Chimneys" type="Spatial" parent="."]
+
+editor/display_folded = true
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="PipeChimney" parent="Chimneys" instance=ExtResource( 3 )]
+
+transform/local = Transform( -0.725187, 0, -0.688552, 0, 1, 0, 0.688552, 0, -0.725187, 0.271563, 0.472587, -2.87438 )
+
+[node name="PipeChimney1" parent="Chimneys" instance=ExtResource( 3 )]
+
+transform/local = Transform( -0.480377, 0, 0.877062, 0, 1, 0, -0.877062, 0, -0.480377, 0.562953, 0.240761, -2.87438 )
+
+[node name="SquaredChimney" parent="Chimneys" instance=ExtResource( 4 )]
+
+transform/local = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -5.7, 1.05331, -2.95427 )
+
+[node name="SquaredChimney1" parent="Chimneys" instance=ExtResource( 4 )]
+
+transform/local = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 5.2, 1.35331, -5.85427 )
+
+[node name="LargeSquaredChimney" parent="Chimneys" instance=ExtResource( 5 )]
+
+transform/local = Transform( 0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -7.8, 1.4, -13.7 )
+
+[node name="DirectionalLight" parent="." instance=ExtResource( 6 )]
+
+transform/local = Transform( 0.775104, 0.594536, -0.21387, -0.0696715, 0.416851, 0.9063, 0.627981, -0.687576, 0.364526, 0, 0, 0 )
+colors/diffuse = Color( 0.6875, 0.69079, 1, 1 )
+colors/specular = Color( 0.734375, 0.737171, 1, 1 )
+shadow/darkening = 0.5
+
+[node name="Astrid" parent="." instance=ExtResource( 7 )]
+
+editor/display_folded = true
+
+[node name="StaticBody" type="StaticBody" parent="Astrid"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+input/ray_pickable = true
+input/capture_on_drag = false
+shape_count = 1
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1, 0 )
+shapes/0/trigger = true
+collision/layers = 1
+collision/mask = 1
+friction = 1.0
+bounce = 0.0
+constant_linear_velocity = Vector3( 0, 0, 0 )
+constant_angular_velocity = Vector3( 0, 0, 0 )
+script/script = ExtResource( 8 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Astrid/StaticBody"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 1, 0 )
+shape = SubResource( 1 )
+trigger = true
+_update_shape_index = 0
+
+[node name="Camera" type="Camera" parent="Astrid"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 2, 0, 0, 0, 1.98672, 0.230074, 0, -0.230074, 1.98672, 1.19147, 1.6795, 5.1587 )
+projection = 0
+fov = 40.0
+near = 0.1
+far = 100.0
+keep_aspect = 1
+current = true
+visible_layers = 1048575
+environment = ExtResource( 9 )
+h_offset = 0.0
+v_offset = 0.0
+
+[node name="Control" type="Control" parent="."]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = true
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+
+[node name="LandingMenu" type="VBoxContainer" parent="Control"]
+
+editor/display_folded = true
+anchor/left = 3
+anchor/top = 3
+anchor/right = 3
+anchor/bottom = 3
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -8.0
+margin/top = 208.0
+margin/right = -416.0
+margin/bottom = -244.0
+custom_constants/separation = 24
+alignment = 0
+script/script = ExtResource( 10 )
+
+[node name="GameTitle" type="TextureFrame" parent="Control/LandingMenu"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 412.0
+margin/bottom = 180.0
+texture = ExtResource( 11 )
+stretch_mode = 0
+
+[node name="ChooseLevelButton" type="Button" parent="Control/LandingMenu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 12 )
+margin/left = 0.0
+margin/top = 204.0
+margin/right = 412.0
+margin/bottom = 230.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Choose a level"
+icon = SubResource( 2 )
+flat = false
+
+[node name="SettingsButton" type="Button" parent="Control/LandingMenu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 12 )
+margin/left = 0.0
+margin/top = 254.0
+margin/right = 412.0
+margin/bottom = 280.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Settings"
+icon = SubResource( 3 )
+flat = false
+
+[node name="CreditsButton" type="Button" parent="Control/LandingMenu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 12 )
+margin/left = 0.0
+margin/top = 304.0
+margin/right = 412.0
+margin/bottom = 330.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Credits"
+icon = SubResource( 4 )
+flat = false
+
+[node name="QuitButton" type="Button" parent="Control/LandingMenu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 12 )
+margin/left = 0.0
+margin/top = 354.0
+margin/right = 412.0
+margin/bottom = 380.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Quit"
+icon = SubResource( 5 )
+flat = false
+
+[node name="LevelSelectionMenu" type="VBoxContainer" parent="Control"]
+
+visibility/visible = false
+anchor/left = 3
+anchor/top = 3
+anchor/right = 3
+anchor/bottom = 3
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -8.0
+margin/top = 210.0
+margin/right = -420.0
+margin/bottom = -250.0
+custom_constants/separation = 18
+alignment = 0
+script/script = ExtResource( 14 )
+
+[node name="SelectLevelTitle" type="Label" parent="Control/LevelSelectionMenu"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 0
+theme/theme = ExtResource( 12 )
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 412.0
+margin/bottom = 39.0
+custom_fonts/font = ExtResource( 15 )
+text = "Level Selection"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="LevelButtonPanel0" parent="Control/LevelSelectionMenu" instance=ExtResource( 16 )]
+
+margin/top = 55.0
+margin/right = 412.0
+margin/bottom = 105.0
+level_scene_file = "res://Scenes/Levels/TutorialLevel0.tscn"
+level_ID = "Tutorial0"
+level_name = "Movement tutorial"
+
+[node name="LevelButtonPanel1" parent="Control/LevelSelectionMenu" instance=ExtResource( 16 )]
+
+margin/top = 121.0
+margin/right = 412.0
+margin/bottom = 171.0
+level_scene_file = "res://Scenes/Levels/TutorialLevel1.tscn"
+level_ID = "Tutorial1"
+level_name = "Jumping tutorial"
+
+[node name="LevelButtonPanel2" parent="Control/LevelSelectionMenu" instance=ExtResource( 16 )]
+
+margin/top = 121.0
+margin/right = 412.0
+margin/bottom = 171.0
+level_scene_file = "res://Scenes/Levels/TutorialLevel2.tscn"
+level_ID = "Tutorial2"
+level_name = "Reverse Charm Tutorial"
+
+[node name="LevelButtonPanel3" parent="Control/LevelSelectionMenu" instance=ExtResource( 16 )]
+
+margin/top = 121.0
+margin/right = 412.0
+margin/bottom = 171.0
+level_scene_file = "res://Scenes/Levels/InfiniteLevel.tscn"
+level_ID = "InfiniteLevel"
+level_name = "Never ending night"
+
+[node name="HSeparator" type="HSeparator" parent="Control/LevelSelectionMenu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 12 )
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 4.0
+margin/bottom = 40.0
+
+[node name="BackButton" type="Button" parent="Control/LevelSelectionMenu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 12 )
+margin/left = 0.0
+margin/top = 319.0
+margin/right = 412.0
+margin/bottom = 345.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Back"
+icon = SubResource( 6 )
+flat = false
+
+[node name="SettingsMenu" parent="Control" instance=ExtResource( 17 )]
+
+anchor/top = 3
+anchor/bottom = 3
+margin/left = -8.0
+margin/top = 210.0
+margin/right = -420.0
+margin/bottom = -121.0
+
+[node name="CreditsMenu" type="VBoxContainer" parent="Control"]
+
+editor/display_folded = true
+visibility/visible = false
+anchor/left = 3
+anchor/top = 3
+anchor/right = 3
+anchor/bottom = 3
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -8.0
+margin/top = 210.0
+margin/right = -420.0
+margin/bottom = -250.0
+alignment = 0
+script/script = ExtResource( 18 )
+
+[node name="MenuTitle" type="Label" parent="Control/CreditsMenu"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 0
+theme/theme = ExtResource( 12 )
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 412.0
+margin/bottom = 39.0
+custom_fonts/font = ExtResource( 15 )
+text = "Credits"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HSeparator" type="HSeparator" parent="Control/CreditsMenu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 12 )
+margin/left = 0.0
+margin/top = 43.0
+margin/right = 412.0
+margin/bottom = 46.0
+
+[node name="Credits" type="Label" parent="Control/CreditsMenu"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+theme/theme = ExtResource( 12 )
+margin/left = 0.0
+margin/top = 50.0
+margin/right = 412.0
+margin/bottom = 176.0
+text = "Developper:\n    Gabriel Marais\nArtists:\n    Mimmi Collin\n    Gabriel Marais\nMusic:\n    Arnaud Quevedo"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HSeparator1" type="HSeparator" parent="Control/CreditsMenu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 12 )
+margin/left = 0.0
+margin/top = 180.0
+margin/right = 412.0
+margin/bottom = 183.0
+
+[node name="Font" type="Label" parent="Control/CreditsMenu"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+theme/theme = ExtResource( 12 )
+margin/left = 0.0
+margin/top = 187.0
+margin/right = 412.0
+margin/bottom = 223.0
+text = "Font:\n    Griffy"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 4
+
+[node name="HSeparator2" type="HSeparator" parent="Control/CreditsMenu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 12 )
+margin/left = 0.0
+margin/top = 227.0
+margin/right = 412.0
+margin/bottom = 230.0
+
+[node name="Sounds" type="Label" parent="Control/CreditsMenu"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+theme/theme = ExtResource( 12 )
+margin/left = 0.0
+margin/top = 234.0
+margin/right = 412.0
+margin/bottom = 306.0
+text = "Sound effects from:\n    www.noiseforfun.com\n    www.freesfx.co.uk\n    soundbible.com\n"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = 4
+
+[node name="HSeparator3" type="HSeparator" parent="Control/CreditsMenu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 12 )
+margin/left = 0.0
+margin/top = 310.0
+margin/right = 412.0
+margin/bottom = 313.0
+
+[node name="BackButton" type="Button" parent="Control/CreditsMenu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+theme/theme = ExtResource( 12 )
+margin/left = 0.0
+margin/top = 317.0
+margin/right = 412.0
+margin/bottom = 343.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Back"
+icon = SubResource( 7 )
+flat = false
+
+[connection signal="pressed" from="Control/LandingMenu/ChooseLevelButton" to="Control/LandingMenu" method="_on_ChooseLevelButton_pressed"]
+
+[connection signal="pressed" from="Control/LandingMenu/SettingsButton" to="Control/LandingMenu" method="_on_SettingsButton_pressed"]
+
+[connection signal="pressed" from="Control/LandingMenu/CreditsButton" to="Control/LandingMenu" method="_on_CreditsButton_pressed"]
+
+[connection signal="pressed" from="Control/LandingMenu/QuitButton" to="Control/LandingMenu" method="_on_QuitButton_pressed"]
+
+[connection signal="pressed" from="Control/LevelSelectionMenu/BackButton" to="Control/LevelSelectionMenu" method="_on_BackButton_pressed"]
+
+[connection signal="pressed" from="Control/CreditsMenu/BackButton" to="Control/CreditsMenu" method="_on_BackButton_pressed"]
+
+

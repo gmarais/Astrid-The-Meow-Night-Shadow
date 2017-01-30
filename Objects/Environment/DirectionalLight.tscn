@@ -1,0 +1,27 @@
+[gd_scene format=1]
+
+[node name="DirectionalLight" type="DirectionalLight"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+transform/local = Transform( 0.990021, 0.0468579, 0.132902, -0.120898, -0.202123, 0.971869, 0.0724021, -0.978238, -0.194441, 0, 0, 0 )
+layers = 1
+params/enabled = true
+params/editor_only = false
+params/bake_mode = 0
+params/energy = 1.0
+colors/diffuse = Color( 0.627451, 0.631373, 1, 1 )
+colors/specular = Color( 0.627451, 0.631373, 1, 1 )
+shadow/shadow = true
+shadow/darkening = 0.4
+shadow/z_offset = 0.05
+shadow/z_slope_scale = 0.0
+shadow/esm_multiplier = 60.0
+shadow/blur_passes = 1.0
+projector = null
+operator = 0
+shadow/mode = 0
+shadow/max_distance = 15.0
+shadow/split_weight = 0.5
+shadow/zoffset_scale = 2.0
+
+

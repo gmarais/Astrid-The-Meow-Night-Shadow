@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://Objects/Buildings/BuildingTiles.tres" type="MeshLibrary" id=1]
+
+
+
+
+[node name="Ramp" type="Spatial"]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="GridMap" type="GridMap" parent="."]
+
+_import_transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+theme/theme = ExtResource( 1 )
+theme/bake = false
+lighting/bake = false
+cell/size = 2.0
+cell/octant_size = 4
+cell/center_x = true
+cell/center_y = false
+cell/center_z = true
+cell/scale = 1.0
+data = { "cells":IntArray( 0, 0, 1441802, 1, 0, 1441799, 65534, 0, 1048583, 65535, 0, 1441802, 0, 49, 1048586, 1, 49, 1441799, 65534, 49, 1048583, 65535, 49, 1048586 ) }
+__meta__ = { "_editor_clip_":0 }
+
+
