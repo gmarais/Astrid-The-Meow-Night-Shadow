@@ -19,6 +19,7 @@ Two buttons:
 [ESC] - Open Menu
 ```
 A game made in Godot 2.1.2 (Stable)
+All graphic assets are under CC-BY-SA license.
 
 >Music by [Arnaud Quevedo](https://www.youtube.com/user/DarthNohks)
 
